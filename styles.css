@@ -1,0 +1,127 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@300&family=Roboto&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+nav
+{
+    background-color: rgb(231, 96, 118);
+    color:white;
+    height : 72px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    padding: 0px 30px;
+    font-family: 'Roboto', sans-serif;
+}
+nav ul li{
+    list-style: none;
+}
+
+.game-box
+{
+   display:flex;
+   justify-content: center; 
+   /* background-color: rgb(231, 96, 118); */
+   margin-top: 50px;
+   position: relative;
+}
+.game{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    padding: 20px 0px;
+    /* position: relative; */
+}
+
+.grid{
+    border: 1.5px solid black;
+    font-size: 4vw;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #efb2f3;
+    cursor: pointer;
+    display:flex;
+    justify-content: center;
+    padding-top: 2rem;
+    align-items: center;
+}
+.grid:hover{
+    background-color: rgb(202, 152, 160);
+}
+
+/* rightside */
+.gameinfo
+{
+    padding: 0px 24px;
+    font-family: 'Mukta Malar', sans-serif;
+}
+
+.br-0
+{
+    border-right: 0;
+}
+.bl-0
+{
+    border-left: 0;
+}
+.bt-0
+{
+    border-top: 0;
+}
+.bb-0
+{
+    border-bottom: 0;
+}
+
+/*image*/
+.image-box img
+{
+    width: 0px;
+    transition: width 1s ease-in-out;
+}
+
+#Reset
+{
+    margin: 0 23px;
+    padding: 6px 14px;
+    background-color: rgb(252, 194, 204);
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@media only screen  and  (max-width : 800px) 
+{
+  .game-box
+  {
+    flex-wrap: wrap;
+  } 
+  .gameinfo
+  {
+    margin-top: 23px;
+  } 
+  .gameinfo h1
+  {
+    font-size: 2rem;
+  }
+  .game
+  {
+    display: grid;
+    grid-template-columns: repeat(3,20vw);
+    grid-template-rows: repeat(3,20vw);
+  }
+  .grid
+  {
+    font-size: 3rem;
+  }
+  .info
+  {
+    font-size: 1.5rem;
+  }
+  /* .gridtext
+  {
+     padding-top: 0px;
+  } */
+}
